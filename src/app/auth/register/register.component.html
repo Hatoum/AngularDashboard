@@ -1,0 +1,53 @@
+<div class="container">
+    <div class="card card-register mx-auto mt-5">
+      <div class="card-header">Register an Account</div>
+      <div class="card-body">
+        <form [formGroup]="Register">
+          <div class="form-group">
+            <div class="form-row">
+              <div class="col-md-6">
+                <div class="form-label-group">
+                  <input type="text" id="firstName" class="form-control" formControlName="firstName" placeholder="First name" required="required" autofocus="autofocus">
+                  <label for="firstName">First name</label>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-label-group">
+                  <input type="text" id="lastName" class="form-control" formControlName="lastName" placeholder="Last name" required="required">
+                  <label for="lastName">Last name</label>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="form-label-group">
+              <input type="email" id="inputEmail" class="form-control" formControlName="email" placeholder="Email address" required="required">
+              <label for="inputEmail">Email address</label>
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="form-row">
+              <div class="col-md-6">
+                <div class="form-label-group">
+                  <input type="password" id="inputPassword" class="form-control" formControlName="password" placeholder="Password" required="required">
+                  <label for="inputPassword">Password</label>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-label-group">
+                  <input type="password" id="confirmPassword" class="form-control" formControlName="pwdVerif" placeholder="Confirm password" required="required">
+                  <label for="confirmPassword">Confirm password</label>
+                </div>
+              </div>
+            </div>
+          </div>
+          <a class="btn btn-primary btn-block" (click)="register();addUser()" >Register</a>
+        </form>
+        <div class="text-center">
+          <a class="d-block small mt-3" [routerLink]="['/login']" routerLinkActive="router-link-active" >Login Page</a>
+          <a class="d-block small" [routerLink]="['/forgotpassword']" routerLinkActive="router-link-active" >Forgot Password?</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
